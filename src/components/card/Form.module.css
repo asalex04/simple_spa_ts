@@ -1,0 +1,29 @@
+.props > div > input {
+    border: 1px solid var(--gray-dark);
+    box-sizing: border-box;
+    min-width: 210px;
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 5px 10px;
+}
+
+.props >div>div>label {
+        font-size: 8px;
+    }
+
+.props >div>div {
+    margin-bottom: 0;
+}
+
+.textarea {
+    border: 1px solid var(--gray-dark);
+    box-sizing: border-box;
+    min-width: 420px;
+    min-height: 55px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.border {
+    border: 2px solid red !important;
+}

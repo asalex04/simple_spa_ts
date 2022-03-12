@@ -1,0 +1,45 @@
+.card {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 15px 15px 5px;
+    background: var(--gray-ligth);
+    margin: 15px 60px 0 35px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 400;
+
+    grid-template-areas:
+    "a ."
+    "b ."
+    "c d";
+}
+
+.fio {
+    grid-area: a;
+}
+
+.city {
+    grid-area: b;
+}
+
+.company {
+    grid-area: c;
+}
+
+.button {
+    grid-area: d;
+}
+.card span {
+    color: var(--gray);
+}
+
+div {
+    margin-bottom: 7px;
+}
+
+.button {
+    display: inline-grid;
+    justify-content: right;
+    margin-top: 0;
+    padding: 0;
+}

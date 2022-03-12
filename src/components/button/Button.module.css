@@ -1,0 +1,32 @@
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.primary {
+    color: var(--white);
+    background: var(--primary);
+}
+
+.green {
+    color: var(--white);
+    background: var(--green);
+}
+
+.grey {
+    color: var(--white);
+    background: var(--gray);
+}
+
+.ghost {
+    color: var(--primary);
+}
+

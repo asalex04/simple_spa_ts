@@ -1,0 +1,11 @@
+.list {
+    margin-top: 20px;
+    margin-left: 35px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.length {
+    font-size: 12px;
+    float: right;
+    margin-right: 60px;
+}
