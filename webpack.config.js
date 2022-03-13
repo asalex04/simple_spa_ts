@@ -1,37 +1,34 @@
 const path = require('path');
-
-let mode = 'development';
-if (process.env.NODE_ENV === 'production') {
-    mode = 'production';
-}
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode,
+    mode: process.env.NODE_ENV || 'development',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'index.bundle.js',
+    },
     entry: './src/index.tsx',
     module: {
         rules: [
             {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
-            {
-                test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
-                type: mode === 'production' ? 'asset' : 'asset/resource',
-            },
         ],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
     },
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'assets/[hash][ext][query]',
-        clean: true,
+    plugins: [
+        new HtmlWebpackPlugin(),
+    ],
+
+    performance: {
+        hints: false,
     },
 };
