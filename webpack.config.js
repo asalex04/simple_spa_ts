@@ -22,13 +22,12 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js', 'jsx'],
     },
     plugins: [
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: "./src/index.html"
+        }),
     ],
+}
 
-    performance: {
-        hints: false,
-    },
-};

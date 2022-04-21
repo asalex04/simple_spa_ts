@@ -7,12 +7,7 @@ Test task
 $ npm install
 ```
 
-### Production
-```
-$ npm run build
-```
-
-### Development
+### Start
 ```
 $ npm run dev
 ```
